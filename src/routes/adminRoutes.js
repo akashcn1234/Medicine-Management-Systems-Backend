@@ -715,8 +715,8 @@ adminRoutes.post('/physician', async (req, res) => {
     let log = {
       email: req.body.email,
       password: hashedPassword,
-      rawpassword: req.body.password,
       role: 4,
+      rawpassword: req.body.password,
     };
     const result3 = await loginDB(log).save();
     let reg = {
