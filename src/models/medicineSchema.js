@@ -6,7 +6,7 @@ const medicineSchema = new mongoose.Schema({
   strength: { type: String, required: true },
   purpose: { type: String, required: true },
   description: { type: String, required: true },
-  quantity: { type: String, required: true },
+  quantity: { type: String, require: true },
   stock: { type: Number, required: true, default: 1 },
   price: { type: Number, required: true },
   image: { type: String, required: true },
