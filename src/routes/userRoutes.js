@@ -16,6 +16,11 @@ userRoutes.post('/order-med/:login_id/:med_id', async (req, res) => {
       unit: req.body.unit,
     };
     const Data = await ordersDB(Medicine).save();
+    const medData = await medicineDB.findOne({ _id: medicineId });
+
+    await medicineDB.updateOne({
+      _id: req.params.med_id
+    }, { $set: { stock: medData.stock - req.body.unit } });
     if (Data) {
       return res.status(201).json({
         Success: true,
