@@ -31,6 +31,7 @@ physicianRoutes.post('/add-med', upload.single('image'), async (req, res) => {
       quantity: req.body.quantity,
       stock: req.body.stock,
       expiry_date:req.body.expiry_date,
+      manu_date:req.body.manu_date,
       price: req.body.price,
       image: req.file ? req.file.path : null,
     };
