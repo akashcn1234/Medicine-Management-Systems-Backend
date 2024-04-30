@@ -104,6 +104,7 @@ adminRoutes.post('/add-med', upload.single('image'), async (req, res) => {
       composition: req.body.composition,
       brand: req.body.brand,
       strength: req.body.strength,
+      expiry_date:req.body.expiry_date,
       quantity: req.body.quantity,
       purpose: req.body.purpose,
       price: req.body.price,
