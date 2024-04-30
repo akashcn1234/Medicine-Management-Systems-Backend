@@ -9,7 +9,7 @@ const medicineSchema = new mongoose.Schema({
   quantity: { type: String, require: true },
   stock: { type: Number, required: true, default: 1 },
   price: { type: Number, required: true },
-  expiry_date:{type: String, required: true},
+  expiry_date:{type: String},
   image: { type: String, required: true },
 });
 
